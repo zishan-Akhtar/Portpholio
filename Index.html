@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,700,0,200" />
+    <!-- <link rel="stylesheet" href="Portfoliyo-Style.css"> -->
+    <!-- <link rel="stylesheet" href="Mobile-view.css"> -->
+    <title>Zishan Akhtar Web Dev_TA Portfolio</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;500&family=Ubuntu:ital@1&display=swap');
+
+* {
+    padding: 0%;
+    margin: 0%;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    box-sizing: border-box;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+:root {
+    --primary-text-color: #ffffff;
+    --secondary-text-color: #4285F4;
+    --accent-color: #537188;
+    --accent-color-dark: #0039a6;
+    --padding-inline-section: 20px;
+}
+
+body {
+    font-family: 'poppins', sans-serif;
+    color: var(--primary-text-color);
+    background: #080808;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.9rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+}
+
+p {
+    font-family: 'roboto', sans-serif;
+    font-size: 1.2rem;
+    color: var(--primary-text-color);
+    line-height: 1.58rem;
+    
+}
+
+a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul {
+    list-style: none;
+
+}
+
+.hover-link {
+    color: var(--primary-text-color);
+
+}
+
+.hover-link:hover {
+    color: var(--secondary-text-color);
+    transition: 0.3s ease-in-out;
+}
+
+.container {
+    margin: 0 80px;
+    overflow: hidden;
+}
+
+.primary-button {
+    background-color: var(--accent-color-dark);
+    border-radius: 8px;
+    font-weight: 500;
+    color: white !important;
+    padding: 12px 24px;
+    box-shadow: 0 0 2px var(--secondary-text-color);
+    transition: 0.5s;
+}
+
+.primary-button:hover {
+    background-color: var(--secondary-text-color);
+}
+
+.secondary-button {
+    border: 0.5px solid var(--secondary-text-color);
+    border-radius: 6px;
+    font-weight: 500;
+    color: var(--primary-text-color) !important;
+    padding: 12px 24px;
+    transition: 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+    border-color: #262626;
+    color: var(--primary-text-color);
+}
+
+nav {
+    position: relative;
+}
+
+.main-Nav {
+    justify-content: space-between;
+}
+
+.main-Nav h1 {
+    font-size: 1.9rem;
+    margin: 10px;
+
+}
+
+.main-Nav span {
+    color: var(--accent-color-dark);
+
+}
+
+.toggle_btn {
+    display: none;
+    cursor: pointer;
+}
+
+.toggle_btn i {
+    margin: 10px;
+  
+
+}
+
+.nav-Links ul {
+    font-size: larger;
+    list-style: none;
+
+}
+
+.nav-Links ul li a {
+    cursor: pointer;
+    margin: 10px;
+    padding: 10px;
+}
+
+/*dropdown_menu*/
+.dropdown_menu {
+    display: none;
+    list-style: none;
+    position: absolute;
+    right: 2rem;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    z-index: 100;
+}
+
+.dropdown_menu.open {
+    height: 210px;
+}
+
+.dropdown_menu li {
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ---------------headersection--------------- */
+#Header {
+    width: 100%;
+    height: 100vh;
+    background-image: url(Assets/BG01.png);
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.main-header {
+    justify-content: space-between;
+}
+
+.text-animation h1 {
+    width: 32.8rem;
+    /* color: #FBBC05; */
+    color: var(--secondary-text-color);
+    position: relative;
+    top: 0;
+    animation: slide 12s steps(4) infinite;
+}
+
+.text-animation h1::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: #080808;
+    border-left: 2px solid var(--primary-text-color);
+    animation: typing 3s steps(12) infinite;
+
+}
+
+/* KEYFAMES ANIMATION */
+@keyframes typing {
+
+    40%,
+    60% {
+        left: 50%;
+    }
+
+    100% {
+        left: 0;
+    }
+}
+
+.header-left h2 {
+    font-size: 1rem;
+    padding-bottom: 3%;
+}
+
+.header-left {
+    margin-top: 18%;
+    margin-left: 5%;
+}
+
+.header-right img {
+    width: 600px;
+    padding: 2%;
+}
+
+.header-left h1 span {
+    /* color: #FBBC05; */
+    
+    color: var(--accent-color-dark);
+}
+
+/* ----------Aboutsection------------- */
+.about {
+    margin-top: 10%;
+}
+
+.about-col-1 {
+    flex-basis: 35%;
+}
+
+.about-col-1 img {
+    width: 400px;
+
+    border-radius: 22px;
+}
+
+.about-col-2 {
+    flex-basis: 55%;
+}
+
+.about-col-2 h2 {
+    padding: 2% 0;
+
+}
+
+.tab-titles {
+    gap: 10%;
+    padding: 2%;
+}
+
+.tab-link {
+    font-size: .75rem;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-link::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: var(--secondary-text-color);
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-link.active-link::after {
+    width: 50%;
+}
+
+.tab-content ul li {
+    margin: 10px 0;
+}
+
+.tab-content ul li span {
+    color: var(--secondary-text-color);
+    font-size: 14px;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active-tab {
+    display: block;
+}
+
+/* ----------services----------- */
+.services {
+    margin-top: 10%;
+}
+
+.services h2 {
+    padding: 0 0 3% 0;
+}
+
+.services-boxes {
+    justify-content: space-evenly;
+    gap: 10px;
+}
+
+.box {
+    border-radius: 14px;
+    height: 275px;
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 3%;
+    background-color: #262626;
+    color: var(--primary-text-color);
+    transition: background 0.5s ease-out;
+    transform: 1.0s ease-out;
+}
+
+.box:hover {
+    background-color: var(--secondary-text-color);
+    transform: translateY(-10px);
+}
+
+.box img {
+    filter: invert(100%);
+    width: 80px;
+    padding: 3%;
+}
+
+.box h3 {
+    padding: 2%;
+}
+
+.box p {
+    padding: 2%;
+    font-size: 14px;
+    font-weight: 100;
+    line-height: 1.3rem;
+
+}
+
+.box a {
+    margin: 3%;
+}
+
+/* ----------------My work section--------------- */
+.portfolio {
+    margin-top: 10%;
+}
+
+.holder {
+    gap: 10%;
+    justify-content: center;
+}
+
+.cards {
+    height: 370px;
+    width: 256px;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+.card {
+    border-radius: 8px;
+    position: relative;
+    overflow: hidden;
+    gap: 10%;
+}
+
+.card img {
+    display: block;
+    width: 100%;
+    border-radius: 8px;
+    transition: tranform 0.5s;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+
+}
+
+.card-Content {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), var(--secondary-text-color));
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    font-weight: 500;
+    transition: height 0.5s;
+}
+
+.card-Content p {
+    font-size: .95rem;
+    padding: 5%;
+}
+
+.card-Content a {
+    text-decoration: none;
+    border-radius: 50%;
+    background: #fff;
+    color: var(--secondary-text-color);
+    line-height: 70px;
+    width: 60px;
+    height: 60px;
+}
+
+.card:hover .card-Content {
+    height: 100%;
+}
+
+.cards-Button {
+    display: block;
+    width: fit-content;
+    margin: 5rem auto;
+    border-radius: 8px;
+    padding: 14px 50px;
+    transition: 0.5s
+}
+
+.cards-Button:hover {
+    background: var(--accent-color-dark);
+}
+
+/* -----------------Contact------------------ */
+.big-Contact-Saction {
+    margin-top: 3%;
+    justify-content: space-between;
+
+}
+
+.left-Section {
+    width: clamp(200px, 50%, 600px);
+    flex-basis: 35%;
+}
+
+.info img {
+    filter: invert(100%);
+    padding-right: 2%;
+    width: 30px;
+}
+
+.links a img {
+    filter: invert(100%);
+    width: 30px;
+    margin: 10px;
+}
+
+.resume {
+    margin: 3%;
+    justify-content: center;
+}
+
+.right-Section {
+    width: clamp(200px, 50%, 600px);
+    flex-basis: 45%;
+}
+
+.form-group input,
+textarea {
+    background-color: #262620;
+    width: clamp(200px, 100%, 800px);
+    border-radius: 8px;
+    padding: 1%;
+    margin: 1%;
+    font-size: 1.25rem;
+}
+
+button a {
+    color: var(--primary-text-color);
+}
+
+footer {
+    color: white;
+    padding: 9px 20px;
+    text-align: center;
+}
+
+#msg {
+    color: green;
+    margin-top: 10px;
+    margin-left: 10px;
+    display: block;
+}
+
+        /*css for mobile view*/
+        @media screen and (max-width: 1310px) {
+
+            .about-col-1 {
+                /*MARGIN FOR IMAGE TO SATTELE*/
+                margin: 30px;
+            }
+        }
+
+        @media screen and (max-width: 1275px) {
+            .box {
+                height: 375px;
+
+            }
+        }
+
+        @media screen and (max-width: 1182px) {
+            .cards {
+                /* SMALL THE HEIGHT & WIDTH OF CARD SO THEY DON'T CRASH INTO EACH OTHERZ*/
+                width: 200px;
+            }
+
+            .about-col-1 img {
+                width: 300px;
+            }
+
+            .box {
+                height: 325px;
+                width: 200px;
+            }
+
+            .box img {
+                width: 50px;
+            }
+
+            .box a {
+                font-weight: 200;
+            }
+        }
+
+        @media screen and (max-width: 990px) {
+            .container {
+                margin: 0 20px;
+            }
+
+            .nav-Links ul {
+                display: none;
+
+            }
+
+            .toggle_btn {
+                display: block;
+            }
+
+            .dropdown_menu {
+                display: block;
+            }
+
+        }
+
+        @media screen and (max-width: 576px) {
+            .dropdown_menu {
+                left: 2rem;
+                width: unset;
+
+            }
+
+            p {
+                text-align: center;
+            }
+
+
+
+            .left-Section {
+                flex-basis: 100%;
+            }
+
+            .info,
+            .links,
+            .resume {
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        @media screen and (max-width: 991px) {
+
+            .container {
+                margin: 0 20px;
+            }
+
+            #Header {
+                background-image: url(Assets/BG01.png);
+                width: 100vw;
+                height: 150vh;
+                background-position-y: 5rem;
+
+            }
+
+            .about {
+
+                justify-content: center;
+                align-items: center;
+            }
+
+            @keyframes typing {
+
+                40%,
+                60% {
+                    left: 35%;
+                }
+
+                100% {
+                    left: 0;
+                }
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            h2 {
+                font-size: 1.4rem;
+            }
+
+            h3 {
+                font-size: .95rem;
+            }
+
+            h4 {
+                font-size: .75rem;
+            }
+
+            p {
+                font-size: .75rem;
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+
+            h2 {
+                font-size: .94rem;
+            }
+
+            h3 {
+                font-size: .65rem;
+            }
+
+            h4 {
+                font-size: .45rem;
+            }
+
+            p {
+                font-size: .55rem;
+            }
+
+            @keyframes typing {
+
+                40%,
+                60% {
+                    left: 25%;
+                }
+
+                100% {
+                    left: 0;
+                }
+            }
+        }
+
+        */
+    </style>
+</head>
+
+<body>
+    <!----- NAV-SECTION ----->
+    <nav>
+        <div class="main-Nav flex container">
+            <h1><span>Z</span>ISHAN.</h1>
+            <div class="nav-Links flex">
+                <ul class="flex">
+                    <li><a href="#" class="hover-link">Home</a></li>
+                    <li><a href="#About" class="hover-link">About</a></li>
+                    <li><a href="#Services" class="hover-link">Services</a></li>
+                    <li><a href="#Portfolio" class="hover-link">Portfolio</a></li>
+                    <li><a href="#Contact" class="hover-link">Contact</a></li>
+                </ul>
+                <div class="toggle_btn">
+                    <i class="material-symbols-outlined ">menu</i>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown_menu  ">
+            <li><a href="#" class="hover-link">Home</a></li>
+            <li><a href="#Header" class="hover-link">About</a></li>
+            <li><a href="#Services" class="hover-link">Services</a></li>
+            <li><a href="#Portfolio" class="hover-link">Portfolio</a></li>
+            <li><a href="#Contact" class="hover-link">Contact</a></li>
+        </div>
+    </nav>
+    <!--------------Header----------------->
+    <header id="Header">
+        <div class="main-header container flex">
+            <div class="header-left ">
+                <div class="text-animation">
+                    <h1>Hello world</h1>
+                </div>
+                <h2>Ui\Ux Desginer & Front-End Dev_Ta</h2>
+                <h1>Hi, I'm <span>Zishan</span> <br> Akhtar form Delhi</h1>
+            </div>
+        </div>
+
+    </header>
+    <!--------------About----------------->
+    <div class="about container flex" id="About">
+        <div class="about-col-1">
+            <img src="/Assets/BG02.jpg" alt="">
+        </div>
+        <div class="about-col-2">
+            <h2>About Me</h2>
+            <p>Hy I'm Zishan Akhtar founder of Tailerman and Web devta. I belive anyone can do or learn any thing WEB
+                DEVTA is exapmle of that. They just need dadication for achiving that goal . So I'm designer also I have
+                a very good sence what is goimg to rock at cheap prices and also I don't take charges for counseltation
+                feel free to call. Have a nice day :) </p>
+            <div class="tab-titles flex">
+                <p class="tab-link active-link" onclick="opentab('skills')">Skill</p>
+                <p class="tab-link" onclick="opentab('experience')">Experience</p>
+                <p class="tab-link" onclick="opentab('education')">Education</p>
+            </div>
+            <div class="tab-content active-tab" id="skills">
+                <ul>
+                    <li><span>UI/UX</span><br> Designer web/app interface</li>
+                    <li><span>Web development</span><br> web/app developmnt</li>
+                    <li><span>SEO</span><br> Search engine optimisation</li>
+                </ul>
+            </div>
+            <div class="tab-content" id="experience">
+                <ul>
+                    <li><span>2022 - current</span><br>Jr.developer at Dist. Comm. Homeguard Office Faridabad</li>
+                    <li><span>2021 - 2022</span><br>Frontend developer at Okaya Electric Vehicle
+                    <li>
+                </ul>
+            </div>
+            <div class="tab-content" id="education">
+                <ul>
+                    <li><span>2022</span><br> Post-Gradution in Bcom from IGNOU </li>
+                    <li><span>2021</span><br> Web Developmnt at Govt. ITI</li>
+                    <li><span>2020</span><br>SEO training from Google</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--------------Services----------------->
+    <div class="services container" id="Services">
+        <h2>My Services</h2>
+        <div class="services-boxes flex">
+            <div class="box  flex">
+                <img src="Assets/Icon(1).png" alt="">
+                <h3>Web Design</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, beatae expedita corrupti, iste
+                    placeat</p>
+                <a href="#" class="secondary-button">Learn more</a>
+            </div>
+            <div class="box flex">
+                <img src="Assets/Icon(2).png" alt="">
+                <h3>UI/UX Design </h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, beatae expedita corrupti, iste
+                    placeat</p>
+                <a href="#" class="secondary-button">Learn more</a>
+            </div>
+            <div class="box  flex">
+                <img src="Assets/Icon(3).png" alt="">
+                <h3>SEO</h3>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quibusdam, beatae expedita corrupti, iste
+                    placeat</p>
+                <a href="#" class="secondary-button">Learn more</a>
+            </div>
+
+        </div><br>
+        <!--------------Mywork----------------->
+        <div class="portfolio " id="Portfolio">
+            <h2>My Work</h2>
+            <div class="holder flex">
+                <div class="cards flex ">
+                    <div class="card">
+                        <img src="Assets/card(1).jpg" alt="">
+                        <div class="card-Content flex">
+                            <h3>Digital counter App</h3>
+                            <p>This Web app can help you to aount on somthing like tasbeeh help you to count.</p>
+                            <a href="#"><i><span class="material-symbols-outlined">open_in_new
+                                    </span></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards flex ">
+                    <div class="card">
+                        <img src="Assets/card(2).jpg" alt="">
+                        <div class="card-Content flex">
+                            <h3>Digital counter App</h3>
+                            <p>This Web app can help you to aount on somthing like tasbeeh help you to count.</p>
+                            <a href="#"><i><span class="material-symbols-outlined">open_in_new
+                                    </span></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cards flex ">
+                    <div class="card">
+                        <img src="Assets/card(3).jpg" alt="">
+                        <div class="card-Content flex">
+                            <h3>Digital counter App</h3>
+                            <p>This Web app can help you to aount on somthing like tasbeeh help you to count.</p>
+                            <a href="#"><i><span class="material-symbols-outlined">open_in_new
+                                    </span></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="secondary-button cards-Button flex ">See more</a>
+        </div>
+        <!--------------Conntact----------------->
+        <div class="contact " id="Contact">
+            <h1>Contact Me</h1>
+            <div class="big-Contact-Saction flex">
+                <div class="left-Section">
+                    <div class="info flex">
+                        <img src="Assets/01.png" alt="Email-ME">
+                        <p>zishanakhtar2000@gmail.com</p>
+                    </div><br>
+                    <div class="info flex">
+                        <img src="Assets/02.png" alt="Call-ME">
+                        <p>+91 9871624818</p>
+                    </div><br>
+                    <div class="links flex">
+                        <a href="#"><img src="Assets/03.png" alt="Facebook"></a>
+                        <a href="#"><img src="Assets/04.png" alt="Twitter"></a>
+                        <a href="#"><img src="Assets/05.png" alt="Instagram"></a>
+                        <a href="#"><img src="Assets/06.png" alt="Linkdin"></a>
+                    </div>
+                    <a href="Assets/my-resume.pdf" download class="resume primary-button flex">Download Resume</a>
+                </div>
+                <div class="right-Section ">
+                    <form name="submit-to-google-sheet" class=" " action="" id="contact-box">
+                        <div class="form-group">
+                            <label for="name"></label>
+                            <input type="text" name="Name" id="name" placeholder="Enter your name"
+                                autocomplete="given-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="email"></label>
+                            <input type="email" name="Email" id="email" placeholder="Enter your email"
+                                autocomplete="given-email">
+                        </div>
+                        <div class="form-group">
+                            <label for="message"> </label>
+                            <textarea name="Message" id="message" cols="10" rows="5"
+                                placeholder="Your Messege"></textarea>
+                        </div>
+                        <div>
+                            <button class="primary-button" type="submit">Submit</button>
+                        </div>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+
+        </div>
+        <!--------------Footer----------------->
+        <footer>
+            <div>
+                Copyright © www.Zishan.com. All rights reserved!
+            </div>
+        </footer>
+        <script>
+            const tablinks = document.getElementsByClassName("tab-link")
+            const tabcontents = document.getElementsByClassName("tab-content")
+
+            function opentab(tabname) {
+                for (tablink of tablinks) {
+                    tablink.classList.remove("active-link")
+                }
+                for (tabcontent of tabcontents) {
+                    tabcontent.classList.remove("active-tab")
+                }
+                event.currentTarget.classList.add("active-link")
+                document.getElementById(tabname).classList.add("active-tab")
+            }
+        </script>
+        <script>
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbyfwWxsnrkdxI62nmtstG-YzA2eiGxuUDqXyOEUpJVXy2Htl1CacjgaWEzbwkAL8nU6JA/exec'
+            const form = document.forms['submit-to-google-sheet']
+            const msg = document.getElementById("msg")
+            form.addEventListener('submit', e => {
+                e.preventDefault()
+                fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                    .then(response => {
+                        msg.innerHTML = "Messege sent successfully"
+                        setTimeout(function () {
+                            msg.innerHTML = ""
+                        }, 1000)
+                        form.reset()
+                    })
+                    .catch(error => console.error('Error!', error.message))
+            })
+        </script>
+        <script>/*DROP-DOWN-MENU*/
+
+            const toggleBtn = document.querySelector('.toggle_btn')
+            const toggleBtnIcon = document.querySelector('.toggle_btn i')
+            const dropDownMenu = document.querySelector('.dropdown_menu ')
+
+            toggleBtn.onclick = function () {
+                dropDownMenu.classList.toggle('open')
+                const isOpen = dropDownMenu.classList.contains('open')
+
+            }
+        </script>
+</body>
+
+</html>
