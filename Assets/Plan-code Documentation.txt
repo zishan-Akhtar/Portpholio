@@ -1,0 +1,33 @@
+> Find photos and font style.
+> Find how he can cahnge between pages with changing the main page.
+> collect neccesry icons 
+.>facebook
+.>whatsapp
+.>linkden
+.>instagram
+
+> section in html
+..>nav section
+..>hero section
+..>about section
+..>about-image section
+..>services section(3 cards that show what help do i get you)
+..>my work section(3 cards with hover shadow effect)
+..>contact section + social media link section
+
+media querry breake point 
+1310
+
+>991px   
+...> About me/ Make everything in center only.
+...> My services/ Give some spaces to box only.
+...> My work/ Give some spaces to box only
+
+>479px
+...>Home/ Make b=nav into burger, Fix bg image , make font-size small only
+...>About me/  Make font-size small , Make Skill tag good, 
+...>My work/ fix Card size , make button smaal
+...>Contact/ make gap between links and form
+ #00abf0
+Idia 
+ make a (hello world) {in breget} in animation word first appear one by one and then disapper all in one that home page from right in front page and then tel i am zishan akhatr dis dat
