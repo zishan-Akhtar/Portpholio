@@ -5,33 +5,73 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="page.css" />
     <title>Tailorman</title>
-    <!-- MOBILE STYLE -->
-    <style>
-      @media screen and (max-width: 425px) {
-        .panels {
-          flex-direction: column;
-        }
-        .panel {
-          flex-direction: row;
-          width: 100vw;
-          height: 100vh;
-        }
-      }
-    </style>
+
     <!-- PAGE STYLE -->
     <style>
       * {
         padding: 0;
         margin: 0;
         box-sizing: border-box;
-        scroll-behavior: smooth;
+        list-style: none;
+        text-decoration: none;
       }
       html,
       body {
         width: 100%;
         height: 100%;
         overflow-x: hidden;
+        background-color: var(--bgColor);
+        color: var(--fontColor);
+        font-family: var(--mainFont);
+        scroll-behavior: smooth;
       }
+      /* UTILITY CLASS */
+      :root {
+        --fontColor: #fffbfd;
+        --primColor: #fff4e6;
+        --secondColor: #780f1a;
+        --bgColor: #351313;
+        --mainFont: "Lora", serif;
+        --orderFont: "Montserrat", sans-serif;
+        --padding-block: 10rem;
+      }
+      .flex{
+        display: flex;
+      }
+
+      /* NAVIGATION-SECTION*/
+
+      .navigation {
+        padding: 1rem;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .navigation h1 a {
+        font-size: 1.5rem;
+      }
+      .navigation a {
+        color: var(--fontColor);
+      }
+
+      .nav-ul li {
+        padding: 1.5rem;
+        font-family: var(--orderFont);
+      }
+      .button {
+        padding: 1rem;
+      }
+      .button a {
+        color: black;
+        border-radius: 30px;
+        padding: 0.75rem;
+        font-family: var(--orderFont);
+        background-color: var(--primColor);
+      }
+
+      .button span {
+        font-size: 3rem;
+      }
+      
       .panels {
         display: flex;
         align-items: center;
@@ -40,7 +80,7 @@
         overflow: hidden;
         flex: 1;
         width: 100vw;
-        height: 100vh;
+        height: 90vh;
       }
       .panel {
         display: flex;
@@ -74,6 +114,7 @@
 
       .panel > *:first-child {
         transform: translateY(-100%);
+        /* border: 2px solid red; */
       }
 
       .panel > *:last-child {
@@ -121,9 +162,63 @@
         padding: 1rem;
       }
     </style>
+
+    <!-- MOBILE STYLE -->
+    <style>
+      @media screen and (max-width: 425px) {
+        .navigation {
+          width: 100%;
+          justify-content: space-between;
+        }
+        .panels {
+          flex-direction: column;
+        }
+        .panel {
+          flex-direction: column;
+          width: 100vw;
+          /* gap: 1rem; */
+        }
+        .panel > * {
+          flex-direction: column;
+          font-size: 1rem;
+        }
+        .panel > *:nth-child(2) {
+          font-size: 1.1rem;
+        }
+
+        .open {
+          flex: 5;
+        }
+        .open > *:nth-child(2) {
+          font-size: 1.5rem;
+        }
+
+        .panel > *:first-child {
+          transform: translateX(100%);
+        }
+
+        .panel > *:last-child {
+          transform: translateX(-100%);
+        }
+
+        .active > *:first-child {
+          transform: translateX(0);
+        }
+        .active > *:last-child {
+          transform: translateX(0);
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="main">
+    <!-- NAVIGATION-SECTION -->
+    <nav class="navigation flex">
+      <h1><a href="#">TAILORMAN</a></h1>
+      <div class="button">
+        <a href="#">ContactUs </a>
+      </div>
+    </nav>
+    <div class="main ">
       <div class="hero">
         <div class="panels">
           <div class="panel img1">
